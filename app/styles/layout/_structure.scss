@@ -1,4 +1,44 @@
-body {
-  background: url("../images/breeze2.jpg") no-repeat center / cover;
-  min-height: 100vh;
+.wrapper {
+  max-width: $wrapper;
+}
+.container {
+  max-width: $container + 30px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.block-header {
+  text-align: center;
+  max-width: 96rem;
+  margin-left: auto;
+  margin-right: auto;
+  &-caption {
+    font-family: $third-font;
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+  }
+  &-heading {
+    font-family: $primary-font;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+    padding-bottom: 4rem;
+    position: relative;
+    &:after {
+      content: '';
+      @include size(6.5rem, 4px);
+      background-color: $primary-color;
+      bottom: 0;
+      @include absoluteCenter('left');
+    }
+  }
+  &-desc {
+    font-family: $secondary-font;
+    font-size: 1.5rem;
+    margin-bottom: 9.5rem;
+    color: $text-color;
+    line-height: 1.4;
+    font-weight: 300;
+  }
 }

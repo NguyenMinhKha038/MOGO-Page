@@ -4,14 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site</title>
+    <title>Welcome to Gulp</title>
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/fontawesome.css">
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet">
   </head>
-  <body>
+  <body class="home-page">
     <div class="wrapper">
-      <header class="header">This is header really?<i class="fal fa-user"></i></header>
+      <header class="header">
+        <div class="container">
+          <div class="header-top"> <a class="header-logo" href="index.html">MoGo</a><i class="fa fa-bars header-toggle"> </i>
+            <ul class="header-menu">
+              <li class="header-menu-item"> <a class="header-menu-link" href="#">About</a></li>
+              <li class="header-menu-item"> <a class="header-menu-link" href="#">Service</a></li>
+              <li class="header-menu-item"> <a class="header-menu-link" href="#">Work</a></li>
+              <li class="header-menu-item"> <a class="header-menu-link" href="#">Blog</a></li>
+              <li class="header-menu-item"> <a class="header-menu-link" href="#">Contact</a></li>
+              <li class="header-menu-item"><a class="header-menu-icon" href="#"> <i class="fa fa-shopping-cart"></i></a></li>
+              <li class="header-menu-item"><a class="header-menu-icon" href="#"> <i class="fa fa-search"></i></a></li>
+            </ul>
+          </div>
+          <div class="header-content"> 
+            <h2 class="header-content-caption">Creative template </h2>
+            <h1 class="header-content-main">Welcome to MoGo</h1><a class="header-content-more" href="">Learn more</a>
+          </div>
+          <div class="header-bottom">
+            <div class="header-bottom-item"><span class="header-bottom-number">01</span><span class="header-bottom-text">Intro</span></div>
+            <div class="header-bottom-item"><span class="header-bottom-number">02</span><span class="header-bottom-text">Work</span></div>
+            <div class="header-bottom-item"><span class="header-bottom-number">03</span><span class="header-bottom-text">About</span></div>
+            <div class="header-bottom-item"><span class="header-bottom-number">04</span><span class="header-bottom-text">Contact</span></div>
+          </div>
+        </div>
+      </header>
+      <section class="about"> 
+        <div class="container">
+          <div class="block-header">
+            <h3 class="block-header-caption">What we do</h3>
+            <h2 class="block-header-heading">Story about us</h2>
+            <p class="block-header-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+          </div>
+          <div class="about-list"> 
+            <div class="about-item"> <img class="about-image" src="https://images.unsplash.com/photo-1714415573193-1c6ac4c6674b?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+              <div class="about-content"> <i class="fa fa-users about-icon"> </i><span class="about-title">Super Team</span></div>
+            </div>
+            <div class="about-item"> <img class="about-image" src="https://images.unsplash.com/photo-1714415573193-1c6ac4c6674b?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+              <div class="about-content"> <i class="fa fa-users about-icon"> </i><span class="about-title">Super Team</span></div>
+            </div>
+            <div class="about-item"> <img class="about-image" src="https://images.unsplash.com/photo-1714415573193-1c6ac4c6674b?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+              <div class="about-content"> <i class="fa fa-users about-icon"> </i><span class="about-title">Super Team</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
       <script src="./scripts/main.js"></script>
     </div>
   </body>

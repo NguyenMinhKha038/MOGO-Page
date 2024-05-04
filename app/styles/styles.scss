@@ -1,1 +1,8 @@
-@import "layout/structure";
+@import 'helpers/variables';
+@import 'helpers/mixins';
+@import 'helpers/global';
+@import 'base/typography';
+
+@import 'layout/header';
+@import 'layout/about';
+@import 'layout/structure';
