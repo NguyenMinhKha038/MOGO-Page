@@ -1,0 +1,41 @@
+.service {
+  padding: 11rem 0 12rem;
+  background-color: white;
+
+  &-list {
+    display: flex;
+    margin-top: 6.5rem;
+    margin-left: -4rem;
+  }
+  &-list:first-of-type {
+    padding-bottom: 5rem;
+    margin-bottom: 5rem;
+    border-bottom: 1px solid $gray-dark;
+  }
+  &-item {
+    width: calc(33.333% - 4rem);
+    display: flex;
+    align-items: flex-start;
+    margin-left: 4rem;
+  }
+  &-item-icon {
+    width: 3.5rem;
+    color: $third-color;
+    margin: 0 3rem;
+  }
+  &-item-info {
+    width: calc(100% - 9.5rem);
+  }
+  &-item-title {
+    color: $title-color;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+  }
+  &-item-desc {
+    color: $text-color;
+    line-height: 1.6;
+    font-weight: 300;
+    font-family: $secondary-font;
+  }
+}

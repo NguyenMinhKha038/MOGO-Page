@@ -8,6 +8,7 @@
   &-list {
     display: flex;
     margin-left: -3rem;
+    flex-wrap: wrap;
   }
   &-item {
     margin-left: 3rem;
@@ -16,6 +17,20 @@
     transition: transform 0.25s linear;
     z-index: 1;
   }
+  //flexbox
+
+  // grid
+  // &-list {
+  //   display: grid;
+  //   grid-template-columns: repeat(3, 1fr);
+  //   grid-column-gap: 3rem;
+  // }
+  // &-item {
+  //   position: relative;
+  //   transition: transform 0.25s linear;
+  // }
+  // grid
+
   &-item:after {
     content: '';
     @include absoluteFull();
@@ -60,5 +75,48 @@
   &-title {
     font-size: 1.8rem;
     font-weight: bold;
+    text-align: center;
+    padding: 0 2rem;
+    @include textClamp(2, 100%);
+  }
+  @include maxWidth(767px) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    // flexbox
+    &-list {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      @include hideScroll();
+      scroll-snap-type: x mandatory;
+      scroll-snap-stop: always;
+    }
+    &-item {
+      width: 80%;
+      margin-bottom: 2.5rem;
+      margin-left: 2.5rem;
+      flex-shrink: 0;
+      scroll-snap-align: center;
+    }
+
+    // flexbox
+
+    //grid
+
+    // &-list {
+    //   grid-template-columns: unset;
+    //   grid-auto-flow: column;
+    //   grid-auto-columns: 80%;
+    //   grid-row-gap: 2.5rem;
+    //   overflow-x: auto;
+    //   @include hideScroll();
+    //   padding: 1rem;
+    //   scroll-snap-type: x mandatory;
+    //   scroll-snap-stop: always;
+    // }
+    // &-item {
+    //   scroll-snap-align: center;
+    // }
+
+    //grid
   }
 }

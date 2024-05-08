@@ -45,3 +45,34 @@
   top: 0;
   left: 0;
 }
+
+@mixin maxWidth($breakPoint) {
+  @media screen and (max-width: $breakPoint) {
+    @content;
+  }
+}
+
+@mixin minWidth($breakPoint) {
+  @media screen and (min-width: $breakPoint) {
+    @content;
+  }
+}
+
+@mixin hideScroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@mixin textClamp($rows, $size) {
+  display: -webkit-box;
+  -webkit-line-clamp: $rows;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: $size;
+  max-width: $size;
+  white-space: pre-wrap;
+}

@@ -115,7 +115,7 @@
     font-size: 2rem;
     cursor: pointer;
   }
-  @media screen and (max-width: 1024px) {
+  @include maxWidth(1024px) {
     min-height: unset;
     .header-bottom {
       margin-top: 10rem;
@@ -127,7 +127,7 @@
       font-size: 10rem;
     }
   }
-  @media screen and (min-width: 768px) {
+  @include minWidth(767px) {
     &-menu-item:not(:first-child) {
       margin-left: 5rem;
     }
@@ -145,7 +145,7 @@
       border-bottom-color: $secondary-color;
     }
   }
-  @media screen and (max-width: 767px) {
+  @include maxWidth(767px) {
     .header-bottom {
       margin-top: 5rem;
     }

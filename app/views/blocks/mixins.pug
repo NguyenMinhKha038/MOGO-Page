@@ -13,3 +13,15 @@ mixin blockBox(caption, title, desc)
     h2.block-header-heading= title 
     if desc 
       p.block-header-desc= desc
+
+mixin aboutItem(src, title, iconClass='fa fa-users')
+  .about-item 
+    img.about-image(src= src)
+    .about-content 
+      i.about-icon(class= iconClass)
+      span.about-title= title
+
+mixin countItem(count, title)
+  .number-item 
+    h4.number-item-count= count
+    span.number-item-text= title
