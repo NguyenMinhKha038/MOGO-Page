@@ -4,8 +4,9 @@
 
   &-list {
     display: flex;
+    align-items: stretch;
+    justify-content: space-between;
     margin-top: 6.5rem;
-    margin-left: -4rem;
   }
   &-list:first-of-type {
     padding-bottom: 5rem;
@@ -13,10 +14,9 @@
     border-bottom: 1px solid $gray-dark;
   }
   &-item {
-    width: calc(33.333% - 4rem);
+    width: calc(33.333% - 2.7rem);
     display: flex;
     align-items: flex-start;
-    margin-left: 4rem;
   }
   &-item-icon {
     width: 3.5rem;
@@ -37,5 +37,23 @@
     line-height: 1.6;
     font-weight: 300;
     font-family: $secondary-font;
+  }
+  @include maxWidth(440px){
+    padding: 5rem 0 12rem;
+    &-list{
+      display: block;
+    }
+    &-item{
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    &-item-title{
+      font-weight: 600;
+    }
+    &-item:not(:last-child){
+      margin-bottom: 2rem;
+    }
+    
+ 
   }
 }
