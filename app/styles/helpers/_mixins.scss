@@ -3,8 +3,8 @@
   height: $height;
 }
 
-@mixin absoluteCenter($direction) {
-  position: absolute;
+@mixin absoluteCenter($direction, $position: absolute) {
+  position: $position;
   @if $direction == 'left' {
     left: 50%;
     transform: translateX(-50%);

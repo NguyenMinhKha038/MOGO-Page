@@ -28,7 +28,16 @@ mixin countItem(count, title)
 
 mixin serviceItem(src, title, desc)
   .service-item
-      img.service-item-icon(src= src)
-      .service-item-info 
-          h3.service-item-title= title
-          p.service-item-desc= desc
+    img.service-item-icon(src= src)
+    .service-item-info 
+      h3.service-item-title= title
+      p.service-item-desc= desc
+
+mixin wedoItem(src, title, desc, subClass='')
+  .wedo-item(class= subClass)
+    .wedo-item-header 
+      img(src= src).wedo-item-icon
+      h3.wedo-item-title= title
+      i.fal.fa-angle-down.wedo-item-arrow
+    .wedo-item-content 
+      .wedo-item-text= desc
