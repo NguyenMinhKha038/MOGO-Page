@@ -1,0 +1,13 @@
+.logo {
+  background-color: $gray-color;
+
+  &-list {
+    padding: 8rem 0;
+  }
+
+  @include maxWidth(440px) {
+    &-list {
+      padding: 3rem 0;
+    }
+  }
+}
