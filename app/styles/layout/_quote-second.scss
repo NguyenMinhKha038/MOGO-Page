@@ -1,0 +1,79 @@
+.quote {
+  &-container {
+    padding: 6.5rem 0;
+    display: flex;
+    align-items: center;
+  }
+  &-second {
+    background-color: $gray-color;
+    &-content {
+      padding: 0 2.5rem;
+      &-desc {
+        font-family: $secondary-font;
+        font-size: 2.5rem;
+        color: $text-color;
+        font-weight: 300;
+        line-height: 1.6;
+        font-style: italic;
+        margin-bottom: 2.5rem;
+        @include minWidth(767px) {
+          @include textClamp(3, 100%);
+        }
+      }
+      &-signature {
+        font-family: $third-font;
+        color: $title-color;
+        font-size: 2.4rem;
+        position: relative;
+        padding-left: 7rem;
+        &::after {
+          content: '';
+          position: absolute;
+          width: 6rem;
+          height: 4px;
+          background-color: $primary-color;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+
+    &-arrow {
+      font-size: 3rem;
+      padding: 0 2rem;
+      color: $gray-dark;
+    }
+    @include maxWidth(440px) {
+      &-container {
+        display: block;
+      }
+      &-img {
+        margin: auto;
+        margin-bottom: 4rem;
+      }
+      &-content {
+        padding: 0;
+        &-desc {
+          font-size: 1.6rem;
+        }
+      }
+      &-arrow {
+        display: none;
+      }
+    }
+  }
+}
+.slick-arrow {
+  background-color: transparent;
+  border: 0;
+  font-size: 3rem;
+  color: $gray-dark;
+  padding: 1rem 2rem;
+  margin: auto;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}

@@ -15,3 +15,20 @@ window.addEventListener('load', function () {
     menu && menu.classList.remove('is-expand');
   }
 });
+
+$(document).ready(function () {
+  $('.quote-container').slick({
+    prevArrow:
+      "<button type='button' class='slick-arrow pull-left'><i class='fal fa-angle-left' aria-hidden='true'></i></button>",
+    nextArrow:
+      "<button type='button' class='slick-arrow pull-right'><i class='fal fa-angle-right' aria-hidden='true'></i></button>",
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          arrows: false,
+        },
+      },
+    ],
+  });
+});

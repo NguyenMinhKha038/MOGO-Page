@@ -2,6 +2,7 @@
 @import 'helpers/mixins';
 @import 'helpers/global';
 @import 'base/typography';
+@import 'layout/structure';
 
 @import 'layout/header';
 @import 'layout/about';
@@ -15,4 +16,8 @@
 // @import 'layout/work';
 @import 'layout/work2';
 @import 'layout/quote-second';
-@import 'layout/structure';
+@import 'layout/quote-second';
+@import 'layout/happy-client';
+@import 'layout/story';
+@import 'layout/map';
+@import 'layout/footer';

@@ -1,0 +1,27 @@
+.map {
+  background: linear-gradient(to bottom, rgba(white, 0.7), rgba(white, 0.7)),
+    url('../images/img-map.png') no-repeat center/cover;
+  padding: 6rem 0;
+  &-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 6.5rem;
+      height: 5px;
+      background-color: $primary-color;
+      bottom: 0;
+    }
+
+    &-title {
+      padding: 2rem 0;
+      color: $primary-color;
+      font-weight: 700;
+      font-size: 2.5rem;
+    }
+  }
+}

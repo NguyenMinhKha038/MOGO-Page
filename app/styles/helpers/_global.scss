@@ -14,3 +14,13 @@ body {
 ul {
   list-style-type: none;
 }
+input,
+button {
+  font-family: $primary-font;
+  line-height: 1;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}

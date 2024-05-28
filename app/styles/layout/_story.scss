@@ -1,0 +1,100 @@
+.story {
+  padding: 11rem 0;
+  &-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-item-img {
+    position: relative;
+  }
+  &-item-img > img {
+    width: 100%;
+  }
+
+  &-item {
+    width: calc(33.3333% - 2rem);
+  }
+  &-item-content {
+    padding-bottom: 3rem;
+    border-bottom: 2px solid $gray-light;
+  }
+  &-item-title {
+    padding: 2.5rem 0;
+    font-weight: 600;
+  }
+  &-item-desc {
+    font-family: $secondary-font;
+    color: $text-color;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    font-weight: 300;
+  }
+  &-item-icon {
+    color: $third-color;
+    padding-right: 5px;
+  }
+  &-item-count {
+    margin-right: 2rem;
+    color: $text-color;
+  }
+  &-item-social {
+    margin-top: 2.5rem;
+    display: flex;
+  }
+  &-time {
+    height: 8rem;
+    width: 7rem;
+    background-color: $third-color;
+    position: absolute;
+    bottom: 1rem;
+    left: -1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &-day {
+      font-size: 3rem;
+      font-weight: 600;
+      color: white;
+    }
+    &-month {
+      font-style: italic;
+      font-size: 1.5rem;
+      color: white;
+      font-family: $secondary-font;
+      font-weight: 300;
+    }
+  }
+  @include maxWidth(1024px) {
+    &-item-title {
+      line-height: 1.4;
+    }
+  }
+  @include maxWidth(1024px) {
+    &-item-title {
+      font-size: 1.4rem;
+    }
+    &-item-desc {
+      @include textClamp(4, 100%);
+      font-size: 1.3rem;
+    }
+  }
+  @include maxWidth(440px) {
+    &-container {
+      flex-direction: column;
+    }
+    &-item {
+      width: 100%;
+      &:not(:last-child) {
+        margin-bottom: 5rem;
+      }
+    }
+    &-item-title {
+      padding: 1.5rem 0;
+      font-size: 1.2rem;
+    }
+    &-item-desc {
+      font-size: 1.3rem;
+    }
+  }
+}

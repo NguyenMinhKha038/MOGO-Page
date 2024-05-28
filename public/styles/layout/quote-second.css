@@ -1,0 +1,25 @@
+.quote-second {
+  background-color: #f8f8f8;
+  padding: 0 5.5rem;
+}
+.quote-second-container {
+  position: relative;
+  padding: 6.5rem 0;
+}
+.quote-second-content {
+  display: flex;
+}
+.quote-second-arrow {
+  font-size: 3rem;
+  padding: 0 2rem;
+  position: absolute;
+  top: 50%;
+}
+
+.pull-right {
+  right: 0;
+}
+
+.pull-left {
+  left: 0;
+}
