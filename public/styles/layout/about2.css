@@ -1,0 +1,15 @@
+.about-list {
+  display: flex;
+  margin-left: -3px;
+}
+.about-item {
+  width: calc(33.3333% - 3px);
+  margin-left: 3px;
+  position: relative;
+}
+.about-item::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}

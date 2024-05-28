@@ -337,104 +337,60 @@ html {
 }
 
 .about {
-  padding-top: 9.3rem;
-  padding-bottom: 11rem;
-  background-color: white;
-  display: flex;
+  padding: 11rem 0;
 }
 .about-list {
   display: flex;
   margin-left: -3rem;
-  flex-wrap: wrap;
 }
 .about-item {
+  width: calc(33.3333% - 3rem);
   margin-left: 3rem;
-  width: calc(33.333% - 3rem);
   position: relative;
-  transition: transform 0.25s linear;
-  z-index: 1;
 }
-.about-item:after {
+.about-item > * {
+  will-change: transform;
+  transition: all 0.28s linear;
+}
+.about-item::after {
   content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #95e1d3;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.about-item:hover > * {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-1rem, -1rem);
+}
+.about-content {
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  background-color: #95e1d3;
-  z-index: -1;
-}
-.about-item:hover {
-  transform: translate(-1rem, -1rem);
-}
-.about-item:hover .about-content {
-  opacity: 1;
-  visibility: visible;
-}
-.about-item:hover:after {
-  transform: translate(1rem, 1rem);
-  transition: transform 0.25s linear;
-}
-.about-content {
-  top: 0;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.25s linear;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, rgba(233, 130, 132, 0.8), rgba(237, 215, 137, 0.8));
-  z-index: 2;
-  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-transform: uppercase;
+  background: linear-gradient(to bottom, rgba(233, 130, 132, 0.7), rgba(237, 215, 137, 0.7));
 }
 .about-icon {
   font-size: 2rem;
+  color: white;
   margin-bottom: 1rem;
 }
 .about-title {
-  font-size: 1.8rem;
+  font-size: 2rem;
+  color: white;
   font-weight: bold;
-  text-align: center;
-  padding: 0 2rem;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 100%;
-  max-width: 100%;
-  white-space: pre-wrap;
-}
-@media screen and (max-width: 767px) {
-  .about {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
-  .about-list {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    scroll-snap-type: x mandatory;
-    scroll-snap-stop: always;
-  }
-  .about-list::-webkit-scrollbar {
-    display: none;
-  }
-  .about-item {
-    width: 80%;
-    margin-bottom: 2.5rem;
-    margin-left: 2.5rem;
-    flex-shrink: 0;
-    scroll-snap-align: center;
-  }
 }
 
 .number {
